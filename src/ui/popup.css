@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  width: 280px;
+  margin: 0;
+  padding: 18px;
+  color: #202124;
+  background: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e8eaed;
+    background: #202124;
+  }
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 17px;
+}
+
+p {
+  margin: 14px 0 0;
+  color: #5f6368;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+}
+
+.toggle {
+  width: 36px;
+  height: 20px;
+  border-radius: 20px;
+  background: #9aa0a6;
+}
+
+.toggle::after {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+  border-radius: 50%;
+  background: #fff;
+  content: "";
+  transition: transform 0.15s ease;
+}
+
+input:checked + .toggle {
+  background: #1a73e8;
+}
+
+input:checked + .toggle::after {
+  transform: translateX(16px);
+}
+
+input:focus-visible + .toggle {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
