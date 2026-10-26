@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function updateStatus() {
     status.textContent = checkbox.checked
-      ? "Erweiterung aktiviert"
-      : "Erweiterung deaktiviert";
+      ? "Extension enabled"
+      : "Extension disabled";
   }
 
   updateStatus();
